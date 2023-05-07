@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b2h7um5s1l14g"]
+[gd_scene load_steps=2 format=3 uid="uid://b2h7um5s1l14g"]
+
+[ext_resource type="FontFile" uid="uid://f3fv0qgnsv7g" path="res://fonts/AKIRA EXPANDED DEMO.OTF" id="1_1ggus"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,14 +24,70 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -253.0
-offset_right = 253.0
-offset_bottom = 116.0
+offset_left = -510.5
+offset_top = 57.0
+offset_right = 510.5
+offset_bottom = 173.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/normal_font_size = 150
+theme_override_fonts/normal_font = ExtResource("1_1ggus")
+theme_override_font_sizes/normal_font_size = 103
 text = "Wonder of u"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 274.0
+offset_top = 223.0
+offset_right = -274.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 103.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_1ggus")
+theme_override_font_sizes/font_size = 90
+text = "Play"
+
+[node name="Options" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -51.5
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_1ggus")
+theme_override_font_sizes/font_size = 90
+text = "Options
+"
+
+[node name="Exit" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -103.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_1ggus")
+theme_override_font_sizes/font_size = 90
+text = "Exit
+"
