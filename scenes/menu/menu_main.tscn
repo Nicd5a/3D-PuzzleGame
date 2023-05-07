@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2h7um5s1l14g"]
+[gd_scene load_steps=3 format=3 uid="uid://cijvbcqa8kjr1"]
 
 [ext_resource type="FontFile" uid="uid://f3fv0qgnsv7g" path="res://fonts/AKIRA EXPANDED DEMO.OTF" id="1_1ggus"]
-[ext_resource type="Script" path="res://scripts/menu_main_buttons.gd" id="2_kdoaw"]
+[ext_resource type="Script" path="res://scripts/menu/menu_main_buttons.gd" id="2_adntj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -50,7 +52,7 @@ offset_right = -274.0
 offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_kdoaw")
+script = ExtResource("2_adntj")
 
 [node name="Play" type="Button" parent="Control"]
 layout_mode = 1
