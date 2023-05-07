@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Character script.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+margin = 0.001
+extents = Vector3( 0.363959, 0.203731, 0.402811 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[node name="Character" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 2.02785, 0, 0, 0, 1, 0.00172406, -2.98023e-08, -0.000846386 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.363178, 0, 0, 0, 0.410547, 0, 0, 0, 0.401426, 0.0100064, 0, -0.0167515 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="SpringArm" type="SpringArm" parent="."]
+
+[node name="Camera" type="Camera" parent="SpringArm"]
+fov = 94.2206

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wg3rEys.mp3-ab57fc4c23e264ebaf2cbbe0ccacf04f.mp3str"
+
+[deps]
+
+source_file="res://Art/Wg3rEys.mp3"
+dest_files=[ "res://.import/Wg3rEys.mp3-ab57fc4c23e264ebaf2cbbe0ccacf04f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
