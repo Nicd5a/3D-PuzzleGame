@@ -4,12 +4,12 @@ extends Control
 @export var options_scene : PackedScene
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file(play_scene.resource_path)
+	pass # Replace with function body.
 
 
 func _on_options_pressed():
-	get_tree().change_scene_to_file(options_scene.resource_path)
+	pass # Replace with function body.
 
 
 func _on_exit_pressed():
-	get_tree().quit(0)
+	get_tree().root.exit
