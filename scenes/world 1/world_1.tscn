@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://den682l07mklj"]
+
+[ext_resource type="PackedScene" uid="uid://c5bvclc1ruoty" path="res://models/world 1/sands_location.glb" id="1_54crl"]
+
+[node name="World 1" type="Node3D"]
+
+[node name="sands_location" parent="." instance=ExtResource("1_54crl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231286, 0, -0.854296)
