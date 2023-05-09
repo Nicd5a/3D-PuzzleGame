@@ -11,5 +11,5 @@ func _on_options_pressed():
 	get_tree().change_scene_to_file(options_scene.resource_path)
 
 
-func _on_exit_pressed():
+func _on_quit_pressed():
 	get_tree().quit(0)

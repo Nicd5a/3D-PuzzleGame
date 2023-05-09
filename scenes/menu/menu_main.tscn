@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmki045uafrdp"]
+
+[ext_resource type="FontFile" uid="uid://f3fv0qgnsv7g" path="res://fonts/AKIRA EXPANDED DEMO.OTF" id="1_i0p7d"]
+[ext_resource type="Script" path="res://scripts/menu/menu_main_buttons.gd" id="2_obsee"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.266667, 0.27451, 0.568627, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -496.0
+offset_right = 497.0
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("1_i0p7d")
+theme_override_font_sizes/normal_font_size = 100
+text = "Wonder of U
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 277.0
+offset_top = 150.0
+offset_right = -277.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_obsee")
+
+[node name="Play" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 90
+action_mode = 0
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -66.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 90
+action_mode = 0
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_font_sizes/font_size = 90
+action_mode = 0
+text = "QUIT"
+
+[connection signal="pressed" from="Buttons/Play" to="Buttons" method="_on_play_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="Buttons" method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="Buttons" method="_on_quit_pressed"]
