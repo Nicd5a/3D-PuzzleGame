@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://den682l07mklj"]
+[gd_scene load_steps=6 format=3 uid="uid://den682l07mklj"]
 
-[ext_resource type="PackedScene" uid="uid://c5bvclc1ruoty" path="res://models/world 1/sands_location.glb" id="1_54crl"]
+[ext_resource type="PackedScene" uid="uid://do1kney8yisro" path="res://scenes/player/player.tscn" id="1_6nyqm"]
+[ext_resource type="PackedScene" uid="uid://ef7rdcwbqolm" path="res://models/world 1/sands_location.tscn" id="2_0o0jj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xrl2d"]
+sky_top_color = Color(0, 0.482353, 0.698039, 1)
+sky_horizon_color = Color(0.733333, 0.639216, 0.501961, 1)
+ground_bottom_color = Color(0.866667, 0.662745, 0.360784, 1)
+
+[sub_resource type="Sky" id="Sky_hrlch"]
+sky_material = SubResource("ProceduralSkyMaterial_xrl2d")
+
+[sub_resource type="Environment" id="Environment_eeb62"]
+background_mode = 2
+sky = SubResource("Sky_hrlch")
 
 [node name="World 1" type="Node3D"]
 
-[node name="sands_location" parent="." instance=ExtResource("1_54crl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.231286, 0, -0.854296)
+[node name="player" parent="." instance=ExtResource("1_6nyqm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.571648, 5.68585, 13.1142)
+
+[node name="sands_location" parent="." instance=ExtResource("2_0o0jj")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eeb62")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.53977, 0.841812, 0, -0.841812, 0.53977, 0, 17.4303, 17.4979)

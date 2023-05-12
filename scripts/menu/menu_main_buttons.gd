@@ -4,7 +4,7 @@ extends Control
 @export var options_scene : PackedScene
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file(play_scene.resource_path)
+	get_tree().change_scene_to_file("res://scenes/world 1/world_1.tscn")
 
 
 func _on_options_pressed():
